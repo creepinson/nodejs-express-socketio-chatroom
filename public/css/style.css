@@ -1,7 +1,9 @@
 body {
-    padding: 3em;
-    font-family: "Open Sans", sans-serif;
-    font-size: 1em;
+	padding: 3em;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	background-image: url("https://uwu.cam/static/media/uwu.33cd4cf0.gif");
+	background-size: 250px;
 }
 
 textarea {
