@@ -42,7 +42,7 @@ app.set("views", __dirname + "/views");
 app.set("view engine", "jade");
 
 //Specify where the static content is
-app.use("public", express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public"));
 
 //Tells server to support JSON requests
 app.use(express.json());
