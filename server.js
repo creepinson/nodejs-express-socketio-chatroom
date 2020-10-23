@@ -14,7 +14,7 @@ underscore. Oh, and "socket.io" is simply called io. Seriously, the
 rest should be named after its module name.
 
 */
-var express = require("express"),
+const express = require("express"),
     app = express(),
     http = require("http").createServer(app),
     bodyParser = require("body-parser"),
@@ -29,11 +29,11 @@ var express = require("express"),
  name: "participantName"
  }
  */
-var participants = [];
+let participants = [];
 
 /* Server config */
 //Server's port number
-app.set("port", process.env.PORT ?? 8080);
+app.set("port", process.env.PORT || 8080);
 
 //Specify the views folder
 app.set("views", __dirname + "/views");
@@ -42,7 +42,7 @@ app.set("views", __dirname + "/views");
 app.set("view engine", "jade");
 
 //Specify where the static content is
-app.use(express.static("public", __dirname + "/public"));
+app.use("public", express.static(__dirname + "/public"));
 
 //Tells server to support JSON requests
 app.use(express.json());
